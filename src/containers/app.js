@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from '../components/search-bar';
 import VideoList from './video-list';
+import VideoDetail from '../components/video-detail';
 import axios from 'axios';
 
 const API_END_POINT = "https://api.themoviedb.org/3/";
@@ -29,6 +30,8 @@ class App extends Component {
       <div>
         <SearchBar/>
         <VideoList/>
+        <VideoDetail title = {this.state.currentMovie.title} description={this.state.currentMovie.overview} />
+        
     </div>
     )
   }
